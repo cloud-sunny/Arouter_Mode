@@ -1,0 +1,14 @@
+apply plugin: 'java-library'
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    // As-3.4.1 + gradle5.1.1-all + auto-service:1.0-rc4
+    //annotationProcessor 'com. google. auto. service:auto-service:1.0-rc4'
+    //compileOnly 'com. google.auto. service:auto-service:1.0-rc4'
+    //依赖goole注解处理器的包
+    implementation 'com.google.auto.service:auto-service:1.0-rc3'
+    implementation project(':annotations')
+}
+
+sourceCompatibility = "7"
+targetCompatibility = "7"
